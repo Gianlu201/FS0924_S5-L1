@@ -30,6 +30,12 @@ hr {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 1.9rem;
+  }
+}
+
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
@@ -70,6 +76,29 @@ header nav li a::before {
   header nav li {
     display: inline;
     margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    padding: 1em;
+    text-align: start;
+  }
+
+  header * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  header div img,
+  header div p {
+    margin: 0;
+  }
+
+  header nav {
+    float: inline-end;
+    position: relative;
+    top: 15px;
   }
 }
 
@@ -172,6 +201,13 @@ iframe {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  article #ContainerLogoHtml #logoHtml {
+    width: 65px;
+    height: 70px;
+  }
+}
+
 /* TABELLE */
 table {
   margin-bottom: 2em;
@@ -212,6 +248,13 @@ tbody tr:last-of-type {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  table {
+    width: 70%;
+    font-size: 0.8em;
+  }
+}
+
 /* FORM */
 input {
   padding: 5px;
@@ -249,6 +292,22 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  iframe,
+  section {
+    display: inline-block;
+    width: 48%;
+    border-radius: 20px;
+    vertical-align: top;
+    margin: 0 auto 2em;
+    height: 220px;
+  }
+
+  section {
+    font-size: 1em;
+  }
+}
+
 /* ELEMENTI NELL' ASIDE */
 aside h2 {
   text-align: center;
@@ -278,8 +337,20 @@ aside div p:last-child {
 
 @media screen and (min-width: 992px) {
   aside h2 {
-    font-size: 1.6em;
+    font-size: 1.8em;
   }
+
+  aside div {
+    display: inline-block;
+    width: 32%;
+  }
+
+  aside div p:last-of-type {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
 }
 
 /* FOOTER */
@@ -309,5 +380,30 @@ footer a {
 @media screen and (min-width: 992px) {
   footer {
     font-size: 0.95em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    font-size: 0.8em;
+  }
+
+  footer address {
+    width: 60%;
+    margin: 0 auto 1em;
+  }
+}
+
+@media print {
+  header,
+  iframe,
+  section,
+  aside,
+  footer {
+    display: none;
+  }
+
+  main {
+    box-shadow: none;
   }
 }
