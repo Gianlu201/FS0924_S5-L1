@@ -8,6 +8,7 @@ body {
   line-height: 1.5;
   padding: 15px;
   background-image: url('../img/sfondo.png');
+  background-size: contain;
   background-position: center center;
 }
 * {
@@ -16,6 +17,18 @@ body {
 hr {
   display: none;
 } /* rimuove l'elemento */
+
+@media screen and (min-width: 576px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 2.6rem;
+  }
+}
 
 /* HEADER */
 header {
@@ -51,6 +64,13 @@ header nav li a:hover {
 }
 header nav li a::before {
   content: '\22c6\0020';
+}
+
+@media screen and (min-width: 576px) {
+  header nav li {
+    display: inline;
+    margin-right: 10px;
+  }
 }
 
 /* MAIN */
@@ -92,6 +112,7 @@ blockquote {
 h1 + p {
   color: #a0a0a0;
 }
+
 ul,
 ol {
   margin-left: 2em;
@@ -114,6 +135,41 @@ iframe {
   height: auto;
   margin-bottom: 2em;
   border-radius: 20px;
+}
+
+@media screen and (min-width: 576px) {
+  article #ContainerLogoHtml {
+    width: fit-content;
+    border: 5px solid #a12572;
+    height: fit-content;
+    margin-bottom: 5px;
+  }
+
+  article #ContainerLogoHtml #logoHtml {
+    width: 75px;
+    height: 80px;
+    background-image: url('/assets/img/badge.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid #01a0c6;
+  }
+
+  h1 {
+    font-size: 2.6em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  article #ContainerLogoHtml #logoHtml {
+    width: 90px;
+    height: 95px;
+  }
+
+  h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
 }
 
 /* TABELLE */
@@ -146,6 +202,16 @@ tbody tr:last-of-type {
   border-bottom: 2px solid #3f6bca;
 }
 
+@media screen and (min-width: 992px) {
+  table {
+    margin: 3.5em auto 5em;
+  }
+
+  iframe {
+    height: 200px;
+  }
+}
+
 /* FORM */
 input {
   padding: 5px;
@@ -158,6 +224,29 @@ button {
   border: 0;
   color: white;
   font-weight: bold;
+}
+
+@media screen and (min-width: 576px) {
+  input {
+    width: 43%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  input,
+  button {
+    font-size: 0.7em;
+  }
+
+  input {
+    width: 72%;
+    padding: 1em;
+    height: 3em;
+  }
+
+  button {
+    padding: 1em 2.5em;
+  }
 }
 
 /* ELEMENTI NELL' ASIDE */
@@ -181,6 +270,18 @@ aside div p:last-child {
   text-align: right;
 }
 
+@media screen and (min-width: 576px) {
+  aside h2 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  aside h2 {
+    font-size: 1.6em;
+  }
+}
+
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
@@ -197,4 +298,16 @@ footer {
 }
 footer a {
   color: fuchsia;
+}
+
+@media screen and (min-width: 576px) {
+  footer {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    font-size: 0.95em;
+  }
 }
